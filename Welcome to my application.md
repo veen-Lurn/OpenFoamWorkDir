@@ -1,7 +1,4 @@
-# OpenFoamWorkDir
-Here, I trend to upload some files and figures to support my Notebook
-
-﻿# PhD Application - OpenFOAM Simulation Wenwen Leng
+# PhD Application - OpenFOAM Simulation Wenwen Leng
 
 I am excited to submit my application for the [PhD Position](https://www.linkedin.com/jobs/view/doctoral-researcher-for-computational-fluid-dynamics-of-solar-energy-fed-pyrolysis-processes-for-new-fuels-at-aalto-university-3710120669/) at Aalto University in the field of Computational Fluid Dynamics for solar energy-fed pyrolysis processes. As a potential candidate, I have conducted a small 2D laminar flow simulation using OpenFOAM to demonstrate my proficiency and keen interest in this area with this Notebook.
 
