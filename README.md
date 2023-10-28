@@ -10,6 +10,8 @@ I am excited to submit my application for the [PhD Position](https://www.linkedi
 The simulation focuses on the laminar flow of mercury through a circular pipe with uniform heat flux walls. The key parameters of this case include a pipe radius of **0.0025 m**, a pipe length of **0.1 m,** and an average inlet velocity of **0.005 m/s**. A two-dimensional axisymmetric model was employed, and the mesh was generated using **ICEM CFD**.
 
 The Schematic Figure is here:
+
+![The Schematic Figure is here](https://github.com/veen-Lurn/OpenFoamWorkDir/blob/main/Sche.png)
 [Click here to see the Sech in GitHub Page.](https://github.com/veen-Lurn/OpenFoamWorkDir/blob/main/Sche.png)
 
 ---
@@ -90,11 +92,13 @@ In this case, I try to use the official **OpenFOAM** calculation example   <font
 * Preparing Files, and Place the grid file  <font color=red> `laminar.cas`</font> into the<font color=red> `laminar`</font> folder.
   
   The calculation example file structure is shown in the figure below.
+![Click here to see the file structure PrtSc in GitHub Page.](https://github.com/veen-Lurn/OpenFoamWorkDir/blob/main/9c64f7100191c48c295fa5418f6715b.png)
 [Click here to see the file structure PrtSc in GitHub Page.](https://github.com/veen-Lurn/OpenFoamWorkDir/blob/main/9c64f7100191c48c295fa5418f6715b.png)
 
 
 Here, the function in **ICEM CFD** is used <font color=red> **`Extrude Mesh`**</font>  to process the 2D grid and convert it into a three-dimensional structure, as shown in the figure below (the **OUTLET** boundary is not marked in the figure).
 
+![Click here to see the Mesh in GitHub Page.](https://github.com/veen-Lurn/OpenFoamWorkDir/blob/main/9c64f7100191c48c295fa5418f6715b.png)
 [Click here to see the Mesh in GitHub Page.](https://github.com/veen-Lurn/OpenFoamWorkDir/blob/main/9c64f7100191c48c295fa5418f6715b.png)
 
 After **ICEM CFD** processing is completed, the calculation grid is exported. 
@@ -137,21 +141,27 @@ Settings in the <font color=red>**`controlDict`**  </font> <font color=red>**`fv
 
 #### 6.1 Speed Distribution at 30 Seconds    
 
+![Click here to get the result of the speed distribution in GitHub Page.](https://github.com/veen-Lurn/OpenFoamWorkDir/blob/main/Speed%20Distribution.png)
  [Click here to get the result of the speed distribution in GitHub Page.](https://github.com/veen-Lurn/OpenFoamWorkDir/blob/main/Speed%20Distribution.png)
 
 #### 6.2  Temperature Distribution at 30 Seconds
+![Click here to get the result of the Temp distribution in GitHub Page.](https://github.com/veen-Lurn/OpenFoamWorkDir/blob/main/Temperature%20Distribution.png)
 [Click here to get the result of the Temp distribution in GitHub Page.](https://github.com/veen-Lurn/OpenFoamWorkDir/blob/main/Temperature%20Distribution.png)
 
 #### 6.3 Exit Position Velocity Distribution at 30 Seconds
+![Click here to get the result of the Exit Position Velocity in GitHub Page.](https://github.com/veen-Lurn/OpenFoamWorkDir/blob/main/Exit%20Position%20Velocity%20Distribution.png)
 [Click here to get the result of the Exit Position Velocity in GitHub Page.](https://github.com/veen-Lurn/OpenFoamWorkDir/blob/main/Exit%20Position%20Velocity%20Distribution.png)
 
 #### 6.4 Outlet Axis Temperature Statistics
 The outlet axis temperature is statistically calculated, as shown in the figure below, and it is measured at **337.494 K**. This value closely aligns with the literature value of **341 K**.
 
+![Click here to get the result of the Outlet Axis Temperature in GitHub Page.](https://github.com/veen-Lurn/OpenFoamWorkDir/blob/main/Outlet%20Axis%20Temperature.png)
 [Click here to get the result of the Outlet Axis Temperature in GitHub Page.](https://github.com/veen-Lurn/OpenFoamWorkDir/blob/main/Outlet%20Axis%20Temperature.png)
 
 #### 6.5 Pressure Drop Calculation
 To calculate the pressure drop, I created a slice and then an integrate variable on **Slice1**. Following this, I created **Calculator1** on **IntegrateVariables1** to obtain the average pressure on the surface. The average pressure on the inlet surface is shown in the figure below, with a pressure value of **7.21232e-05** $\mathrm{m^2}/\mathrm{s^2}$.
+
+![Click here to get the result of the  Pressure Drop in GitHub Page](https://github.com/veen-Lurn/OpenFoamWorkDir/blob/main/The%20average%20pressure%20on%20the%20inlet%20surface.png)
 [Click here to get the result of the  Pressure Drop in GitHub Page](https://github.com/veen-Lurn/OpenFoamWorkDir/blob/main/The%20average%20pressure%20on%20the%20inlet%20surface.png)
 
 The outlet static pressure is set to **0** in the boundary conditions, so there is no need to obtain it through a calculator.
