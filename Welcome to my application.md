@@ -1,4 +1,4 @@
-# PhD Application - OpenFOAM Simulation Wenwen Leng
+﻿# PhD Application - OpenFOAM Simulation Wenwen Leng
 
 I am excited to submit my application for the [PhD Position](https://www.linkedin.com/jobs/view/doctoral-researcher-for-computational-fluid-dynamics-of-solar-energy-fed-pyrolysis-processes-for-new-fuels-at-aalto-university-3710120669/) at Aalto University in the field of Computational Fluid Dynamics for solar energy-fed pyrolysis processes. As a potential candidate, I have conducted a small 2D laminar flow simulation using OpenFOAM to demonstrate my proficiency and keen interest in this area with this Notebook.
 
@@ -114,10 +114,13 @@ After the grid conversion is completed and there are no problems, open the file 
 The kinematic viscosity and thermal diffusion coefficient were specified in the  <font color=red>**`constant/transportProperties`** </font>  file according to the given fluid properties.
 
 The kinematic viscosity needs to be specified:
+
 $$
 \nu=\frac{\mu}{\rho}=\frac{0.001523}{13529}=1.12573 \times 10^{-7} \mathrm{~m}^2 / \mathrm{s}
 $$
+
 The thermal diffusion coefficient DT needs to be specified in this file, which is defined as:
+
 $$
 \mathrm{DT}=\frac{k}{\rho c_p}=\frac{8.51}{13529 \times 139.3}=4.51557 \times 10^{-6} \mathrm{~m}^2 / \mathrm{s}
 $$
@@ -127,6 +130,7 @@ $$
  - The <font color=red>**`U`**  </font> and <font color=red>**`p`**  </font>  files were modified to accommodate fully developed flow conditions at the inlet. 
 
  - The  <font color=red>**`T`**  </font>  file was created and set to handle the specified wall heat flux using Fourier's law, AND the conversion gives:
+   
 $$
 \nabla T=\frac{q}{k}=\frac{5000}{8.54}=585.48
 $$
@@ -164,10 +168,13 @@ To calculate the pressure drop, I created a slice and then an integrate variable
 The outlet static pressure is set to **0** in the boundary conditions, so there is no need to obtain it through a calculator.
 
 It's important to note that the pressure calculated by OpenFOAM in incompressible flow is the kinematic pressure, expressed as the quotient of the pressure value and the density value. To obtain the density value, the obtained kinematic pressure value can be multiplied by the density value. Therefore, the pressure drop at the inlet and outlet can be calculated as:
+
 $$
 \Delta p=7.21232 \times 10^{-5} \times 13512=0.9745286784 \mathrm{~Pa}
 $$
+
 The theoretical pressure drop is calculated as:
+
 $$
 \Delta p=\frac{32 \mu L u_m}{d^2}=\frac{32 \times 0.001523 \times 0.1 \times 0.005}{0.005^2}=0.97472 \mathrm{~Pa}
 $$
